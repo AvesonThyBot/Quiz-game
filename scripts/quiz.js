@@ -19,7 +19,3 @@ exitBtn.onclick= () => {
 
 } 
 
-// start quiz button
-continueBtn.onclick= () => {
-    popupInfo.classList.add('active')
-} 

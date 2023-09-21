@@ -1,0 +1,65 @@
+/* Reset CSS
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* body */
+body{
+    color: #000;
+    background: #48bbfe;
+    margin: 0%;
+}
+
+/* Header */
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100    ;
+}
+
+/* Logo in header */
+.logo{
+    font-size: 32px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    filter: drop-shadow(0 0 5px black);
+}
+
+/* Navbar */
+.navbar a{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: .3s;
+}
+.navbar a.active{
+   color: rgb(192, 179, 2);
+
+}
+
+/* Main */
+.main{
+    min-height: 100vh;
+    background: url('/images/background.jpg') no-repeat;
+    background-size: cover;
+    display: flex;
+    background-position: center;
+    transition: .3s ease;
+    pointer-events: auto;
+}
