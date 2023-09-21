@@ -38,7 +38,6 @@
     margin-left: 35px;
     transition: .3s;
 }
-
 .navbar a:hover,
 .navbar a.active{
    color: rgb(192, 179, 2);
@@ -62,7 +61,6 @@
     justify-content: center;
     align-items: center;
 }
-
 .home-content {
     max-width: 600px;
     display: flex;
@@ -70,13 +68,11 @@
     align-items: center;
     flex-direction: column  ;
 }
-
 .home-content h1{
     font-size: 78px;
     font-weight: 700;
     text-shadow: 0 0 10px rgba(0, 0, 0, .3);
 }
-
 .home-content p{
     color: #fff;
     font-size: 16px;
@@ -85,7 +81,6 @@
     margin-bottom: 30px;
     font-weight: 700;
 }
-
 .home-content .start-btn{
     width: 190px;
     height: 55px;
@@ -100,7 +95,6 @@
     font-weight: 600;
     cursor: pointer;
 }
-
 .home-content .start-btn:hover{
     background:#48bbfe;
     color: white;
@@ -123,7 +117,6 @@
     pointer-events: none;
 
 }
-
 .popup-info h2{
     font-size: 50px;
     color: #fff;
@@ -131,7 +124,6 @@
     text-shadow: 0 0 10px rgba(0, 0, 0, .3);
 
 }
-
 .popup-info .info{
     display: block; 
     font-size: 16px;
@@ -141,7 +133,6 @@
     font-weight: 700;
     text-shadow: 0 0 10px rgba(0, 0, 0, .3);
 }
-
 .popup-info .btn-group{
     display: flex;
     justify-content: space-between;
@@ -151,7 +142,6 @@
     padding: 15px 0 7px;
 
 }
-
 .popup-info .btn-group .info-btn{
     display: inline-flex;
     justify-content: center;
@@ -170,19 +160,17 @@
     cursor: pointer;
     transition: 1s;
 }
-
 .popup-info .btn-group .info-btn:nth-child(1){
     background: transparent;
     color: yellow;
 }
-
 .popup-info .btn-group .info-btn:nth-child(1):hover{
     background: yellow;
     color: black;
 }
-
 .popup-info .btn-group .info-btn:nth-child(2):hover{
     background: orange;
     border-color: orange;
 
 }
+
