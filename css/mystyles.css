@@ -57,11 +57,19 @@ body{
     background-size: cover;
     background-position: center;
     transition: .3s ease;
+    pointer-events: auto;
 }
 .main.active{
     filter: blur(15px);
+
 }
 
+/* Container */
+.container{
+    display: flex;
+    height: 100vh;
+    width: 200%;
+}
 /* Home */
 .home  {
     height: 100vh;
@@ -191,3 +199,8 @@ body{
 
 }
 
+/* Quiz section overlay*/
+.quiz-section{
+    width: 100%;
+    background: aquamarine;
+}
