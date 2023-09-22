@@ -1,4 +1,4 @@
-/* Reset CSS
+/* Reset CSS */
 * {
     margin: 0;
     padding: 0;
@@ -6,60 +6,80 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-/* body */
+/* Body */
 body{
     color: #000;
     background: #48bbfe;
-    margin: 0%;
-}
-
-/* Header */
-.header{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 20px 10%;
-    background-color: transparent;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 100    ;
-}
-
-/* Logo in header */
-.logo{
-    font-size: 32px;
-    color: #fff;
-    text-decoration: none;
-    font-weight: 700;
-    filter: drop-shadow(0 0 5px black);
-}
-
-/* Navbar */
-.navbar a{
-    position: absolute;
-    top: 0%;
-    left: 0%;
-    font-size: 18px;
-    color: #fff;
-    text-decoration: none;
-    font-weight: 500;
-    margin-left: 35px;
-    transition: .3s;
-}
-.navbar a.active{
-   color: rgb(192, 179, 2);
-
-}
-
-/* Main */
-.main{
     min-height: 100vh;
     background: url('/images/background.jpg') no-repeat;
     background-size: cover;
-    display: flex;
     background-position: center;
     transition: .3s ease;
     pointer-events: auto;
+}
+
+/* Full container */
+.container{
+    background:  #fff;
+    width:90%;
+    min-width: 300px;
+    max-width: 600px;
+    height: 90%;
+    min-height: 300px;
+    max-height: 600px;
+    margin: 100px auto 0;
+    border-radius: 10px;
+    padding:30px;
+}
+ /* Container Title */
+.container h1{
+    font-size:25px;
+    color:#001e4d;
+    font-weight:600;
+    border-bottom: 1px solid #333;
+    padding-bottom: 30px;
+}
+ /* Quiz */
+.quiz{
+    padding: 10px 0;
+}
+/* Quiz question */
+.quiz h2{
+    font-size:18px;
+    color: #001e4d;
+    font-weight: 600
+}
+/* All buttons */
+.btn{
+    background: #fff;
+    color: #222;
+    font-weight: 500;
+    width:100%;
+    border: 1px solid #222;
+    padding: 10px;
+    margin:5px 0;
+    text-align:left;
+    border-radius: 4px;
+    cursor:pointer;
+    transition: all 0.3s;
+}
+.btn:hover{
+    background: #48bbfe;
+    color: #fff;
+}
+#continue-btn{
+    background: #fff;
+    color: #000;
+    font-weight: 500;
+    width: 150px;
+    border: 1px solid black;
+    padding: 10px;
+    margin: 20px auto 0;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+#continue-btn:hover{
+    background: #136af7;
+    color: #fff;
 }
