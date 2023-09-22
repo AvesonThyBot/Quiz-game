@@ -1,12 +1,4 @@
-// Assign variables
-let score = 0;
-let questionNumber = 0;
-let completedQuesitons = []
-
-// Assign through DOM
-const questionContainer = document.getElementById("question");
-const scoreContainer = document.getElementById("score");
-
+// Questions
 const questions = [
     {
         question: 'Who was the first Straw Hat to be shown in the anime?',
@@ -142,3 +134,12 @@ const questions = [
         ]
     }
 ];
+
+// Assign variables
+let score = 0;
+let questionNumber = 0;
+let completedQuesitons = []
+
+// Assign through DOM
+const questionContainer = document.getElementById("question");
+const scoreContainer = document.getElementById("score");
