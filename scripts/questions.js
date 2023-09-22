@@ -46,30 +46,12 @@ const questions = [
         ]
     },
     {
-        question: 'What is the name of the dog in Orange Town?',
-        answers: [
-            { text: 'A) Richie', correct: false },
-            { text: 'B) Robson', correct: false },
-            { text: 'C) Chuchun', correct: false },
-            { text: 'D) Chouchou', correct: true }
-        ]
-    },
-    {
         question: 'Who was the first Warlord of the sea to be introduced?',
         answers: [
             { text: 'A) Dracule Mihawk', correct: false },
             { text: 'B) Jimbei', correct: false },
             { text: 'C) Crocodile', correct: true },
             { text: 'D) Blackbeard', correct: false }
-        ]
-    },
-    {
-        question: 'How many times did Zoro lose to Kuina?',
-        answers: [
-            { text: 'A) 101', correct: false },
-            { text: 'B) 201', correct: false },
-            { text: 'C) 2001', correct: false },
-            { text: 'D) 1001', correct: true }
         ]
     },
     {
@@ -100,22 +82,6 @@ const questions = [
         ]
     },
     {
-        question: 'Which sword does Zoro use with his mouth?',
-        answers: [
-            { text: 'A) Wado Ichimonji', correct: false },
-            { text: 'B) Shusui', correct: false },
-            { text: 'C) Sandai Kitetsu', correct: true },
-            { text: 'D) Enma', correct: false }
-        ]
-    },
-    {
-        question: 'True/False: Gaimon isn\'t filler',
-        answers: [
-            { text: 'True', correct: true },
-            { text: 'False', correct: false }
-        ]
-    },
-    {
         question: 'What was Luffy\'s first bounty?',
         answers: [
             { text: 'A) 15,000,000 Berries', correct: false },
@@ -123,19 +89,11 @@ const questions = [
             { text: 'C) 20,000,000 Berries', correct: false },
             { text: 'D) 40,000,000 Berries', correct: false }
         ]
-    },
-    {
-        question: 'What is Smoker\'s epithet?',
-        answers: [
-            { text: 'A) Smokey', correct: false },
-            { text: 'B) The White Hunter', correct: true },
-            { text: 'C) White Chaser', correct: false },
-            { text: 'D) Smoke Man', correct: false }
-        ]
     }
 ];
 
 // Assign variables
+const quizSection = document.querySelector('.quiz');
 let score = 0;
 let questionNumber = 0;
 let completedQuesitons = []
