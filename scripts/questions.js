@@ -130,11 +130,18 @@ let seconds = 0;
 let quizFinished = false;
 
 // Timer
-if (!quizFinished) {
+if (!quizFinished && seconds <= 60) {
     setInterval(function() {
-        timer.innerHTML = `Timer: ${seconds++}s`;
-        }, 1000);
-    }
+        if (seconds >= 60) {
+            const minutes = Math.floor(seconds / 60);
+            const remainingSeconds = seconds % 60;
+            timer.innerHTML = `Timer: ${minutes}m ${remainingSeconds}s`;
+        } else {
+            timer.innerHTML = `Timer: ${seconds}s`;
+        }
+        seconds++;
+    }, 1000);
+}
 
 // Next button function
 nextBtn.onclick= () => {
@@ -162,13 +169,6 @@ goHomeBtn.onclick= () => {
     window.location.href= "/index.html"
 } 
 
-// Timer function
-function time(){
-    setInterval(function() {
-        timer.innerHTML = seconds++;
-        }, 1000);
-    questionTotal.textContent = `${index} of ${questions.length}`
-}
 
 // Getting questions & answers and assigning
 function showQuestions(index){
