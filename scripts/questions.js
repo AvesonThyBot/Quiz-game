@@ -255,6 +255,16 @@ function showResultBox(){
     },speed);
 }
 
+// remove background
+function removeBackground() {
+    const mainElement = document.querySelector('.main');
+    if (mainElement.style.background === 'transparent') {
+        mainElement.style.background = 'url("/images/background.jpg") no-repeat';
+    } else {
+        mainElement.style.background = 'transparent';
+    }
+}
+
 // functions to start quiz
 showQuestions(0)
 questionCounter(1)

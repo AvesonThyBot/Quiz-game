@@ -24,11 +24,15 @@ continueBtn.onclick= () => {
     popupInfo.classList.add('active')
 } 
 
+// background remover
+let isBackgroundImage = true;
+
 function removeBackground() {
-    const main = document.querySelector('.main');
-    if (main.style.background === 'transparent') {
-        main.style.background = 'url("/images/background.jpg") no-repeat';
+    const body = document.body;
+    if (isBackgroundImage) {
+        body.style.background = '#48bbfe';
     } else {
-        main.style.background = 'transparent';
+        body.style.background = 'url("/images/background.jpg") no-repeat center / cover';
     }
+    isBackgroundImage = !isBackgroundImage;
 }
