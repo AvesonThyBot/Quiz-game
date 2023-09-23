@@ -132,7 +132,7 @@ let quizFinished = false;
 // Timer
 if (!quizFinished) {
     setInterval(function() {
-        timer.innerHTML = "Timer: "+seconds++ +'s';
+        timer.innerHTML = `Timer: ${seconds++}s`;
         }, 1000);
     }
 
