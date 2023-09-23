@@ -122,13 +122,19 @@ const tryAgainBtn = document.querySelector(".tryAgain-btn"); //try again button
 const goHomeBtn = document.querySelector(".goHome-btn"); //go to home button
 
 
-
-
 // Assign variables
 let score = 0; 
 let questionCount = 0;
 let questionNumb = 1;
+let seconds = 0;
+let quizFinished = false;
 
+// Timer
+if (!quizFinished) {
+    setInterval(function() {
+        timer.innerHTML = "Timer: "+seconds++ +'s';
+        }, 1000);
+    }
 
 // Next button function
 nextBtn.onclick= () => {
@@ -140,21 +146,29 @@ nextBtn.onclick= () => {
         nextBtn.classList.remove('active')
     }
     else{
+        quizFinished = true;
         // score
         showResultBox();
     }
 } 
 
-// go back to home button.
+//  try again button.
 tryAgainBtn.onclick= () => {
     window.location.href= "/pages/quiz.html"
 } 
-
 
 // go back to home button.
 goHomeBtn.onclick= () => {
     window.location.href= "/index.html"
 } 
+
+// Timer function
+function time(){
+    setInterval(function() {
+        timer.innerHTML = seconds++;
+        }, 1000);
+    questionTotal.textContent = `${index} of ${questions.length}`
+}
 
 // Getting questions & answers and assigning
 function showQuestions(index){
@@ -220,6 +234,10 @@ function showResultBox(){
     
     const scoreText = document.querySelector('.score-text');
     scoreText.textContent= `Your Score ${score} out of ${questions.length}.`;
+    
+    const timerText = document.querySelector(".timer-text");
+    timerText.textContent= `Your timer: ${seconds}s`
+
 
     const circularProgress = document.querySelector('.circular-progress');
     const progressValue = document.querySelector('.progress-value');
@@ -236,7 +254,6 @@ function showResultBox(){
         }
     },speed);
 }
-
 
 // functions to start quiz
 showQuestions(0)
