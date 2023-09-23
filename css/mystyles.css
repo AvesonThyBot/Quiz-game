@@ -47,7 +47,16 @@ body{
 .navbar a:hover,
 .navbar a.active{
    color: rgb(192, 179, 2);
+}
 
+#remove-background{
+    margin: 0 0;
+}
+#remove-background img{
+    position: relative;
+    width: 30px;
+    height: 30px;
+    margin: 0 0;
 }
 
 /* Main */
@@ -191,6 +200,5 @@ body{
 .popup-info .btn-group .info-btn:nth-child(2):hover{
     background: orange;
     border-color: orange;
-
 }
 

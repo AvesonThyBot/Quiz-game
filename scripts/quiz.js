@@ -23,3 +23,12 @@ exitBtn.onclick= () => {
 continueBtn.onclick= () => {
     popupInfo.classList.add('active')
 } 
+
+function removeBackground() {
+    const main = document.querySelector('.main');
+    if (main.style.background === 'transparent') {
+        main.style.background = 'url("/images/background.jpg") no-repeat';
+    } else {
+        main.style.background = 'transparent';
+    }
+}
