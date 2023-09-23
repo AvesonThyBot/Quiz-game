@@ -1,103 +1,200 @@
 // Questions
 const questions = [
     {
+        numb: 1,
         question: 'Who was the first Straw Hat to be shown in the anime?',
-        answers: [
-            { text: 'A) Luffy', correct: true },
-            { text: 'B) Zoro', correct: false },
-            { text: 'C) Nami', correct: false },
-            { text: 'D) Usopp', correct: false }
+        answer: 'A) Luffy',
+        options: [
+            'A) Luffy',
+            'B) Zoro',
+            'C) Nami',
+            'D) Usopp'
         ]
     },
     {
+        numb: 2,
         question: 'How old was Luffy pre-time skip?',
-        answers: [
-            { text: 'A) 16', correct: false },
-            { text: 'B) 17', correct: true },
-            { text: 'C) 18', correct: false },
-            { text: 'D) 19', correct: false }
+        answer: 'B) 17',
+        options: [
+            'A) 16',
+            'B) 17',
+            'C) 18',
+            'D) 19'
         ]
     },
     {
+        numb: 3,
         question: 'Who was the first antagonist of One Piece?',
-        answers: [
-            { text: 'A) Alvida', correct: true },
-            { text: 'B) Buggy', correct: false },
-            { text: 'C) Kuro', correct: false },
-            { text: 'D) Don Krieg', correct: false }
+        answer: 'A) Alvida',
+        options: [
+            'A) Alvida',
+            'B) Buggy',
+            'C) Kuro',
+            'D) Don Krieg'
         ]
     },
     {
+        numb: 4,
         question: 'What was the first ever named attack used by Luffy?',
-        answers: [
-            { text: 'A) Gum-Gum Bullet', correct: false },
-            { text: 'B) Gum-Gum Rocket', correct: false },
-            { text: 'C) Gum-Gum Gatling', correct: false },
-            { text: 'D) Gum-Gum Pistol', correct: true }
+        answer: 'D) Gum-Gum Pistol',
+        options: [
+            'A) Gum-Gum Bullet',
+            'B) Gum-Gum Rocket',
+            'C) Gum-Gum Gatling',
+            'D) Gum-Gum Pistol'
         ]
     },
     {
+        numb: 5,
         question: 'Where was Gol D. Roger executed?',
-        answers: [
-            { text: 'A) Raftel', correct: false },
-            { text: 'B) Loguetown', correct: true },
-            { text: 'C) Goa Kingdom', correct: false },
-            { text: 'D) Gray Terminal', correct: false }
+        answer: 'B) Loguetown',
+        options: [
+            'A) Raftel',
+            'B) Loguetown',
+            'C) Goa Kingdom',
+            'D) Gray Terminal'
         ]
     },
     {
+        numb: 6,
         question: 'Who was the first Warlord of the sea to be introduced?',
-        answers: [
-            { text: 'A) Dracule Mihawk', correct: false },
-            { text: 'B) Jimbei', correct: false },
-            { text: 'C) Crocodile', correct: true },
-            { text: 'D) Blackbeard', correct: false }
+        answer: 'C) Crocodile',
+        options: [
+            'A) Dracule Mihawk',
+            'B) Jimbei',
+            'C) Crocodile',
+            'D) Blackbeard'
         ]
     },
     {
+        numb: 7,
         question: 'What is the name of the Straw Hats\' first ship?',
-        answers: [
-            { text: 'A) Going Merry', correct: true },
-            { text: 'B) Merry Go', correct: false },
-            { text: 'C) Merry', correct: false },
-            { text: 'D) Thousand Sunny', correct: false }
+        answer: 'A) Going Merry',
+        options: [
+            'A) Going Merry',
+            'B) Merry Go',
+            'C) Merry',
+            'D) Thousand Sunny'
         ]
     },
     {
+        numb: 8,
         question: 'How many berries did Nami have to gather for Arlong, in order to free Cocoyasi Village?',
-        answers: [
-            { text: 'A) 100,000 Berries', correct: false },
-            { text: 'B) 1,000,000 Berries', correct: false },
-            { text: 'C) 10,000,000 Berries', correct: false },
-            { text: 'D) 100,000,000 Berries', correct: true }
+        answer: 'D) 100,000,000 Berries',
+        options: [
+            'A) 100,000 Berries',
+            'B) 1,000,000 Berries',
+            'C) 10,000,000 Berries',
+            'D) 100,000,000 Berries'
         ]
     },
     {
+        numb: 9,
         question: 'Which devil fruit was the first to appear after Luffy\'s?',
-        answers: [
-            { text: 'A) Slip-Slip Fruit', correct: false },
-            { text: 'B) Boom-Boom Fruit', correct: true },
-            { text: 'C) Dice-Dice Fruit', correct: false },
-            { text: 'D) Chop-Chop Fruit', correct: false }
+        answer: 'B) Boom-Boom Fruit',
+        options: [
+            'A) Slip-Slip Fruit',
+            'B) Boom-Boom Fruit',
+            'C) Dice-Dice Fruit',
+            'D) Chop-Chop Fruit'
         ]
     },
     {
+        numb: 10,
         question: 'What was Luffy\'s first bounty?',
-        answers: [
-            { text: 'A) 15,000,000 Berries', correct: false },
-            { text: 'B) 30,000,000 Berries', correct: true },
-            { text: 'C) 20,000,000 Berries', correct: false },
-            { text: 'D) 40,000,000 Berries', correct: false }
+        answer: 'B) 30,000,000 Berries',
+        options: [
+            'A) 15,000,000 Berries',
+            'B) 30,000,000 Berries',
+            'C) 20,000,000 Berries',
+            'D) 40,000,000 Berries'
         ]
     }
 ];
 
-// Assign variables
-const quizSection = document.querySelector('.quiz');
-let score = 0;
-let questionNumber = 0;
-let completedQuesitons = []
-
 // Assign through DOM
-const questionContainer = document.getElementById("question");
-const scoreContainer = document.getElementById("score");
+const timer = document.querySelector(".timer"); // Timer
+const nextBtn = document.querySelector(".next-btn"); // Next button
+const optionList = document.querySelector(".option-list"); //Option list
+
+// Assign variables
+let score = 0; 
+let questionCount = 0;
+let questionNumb = 1;
+
+
+// Next button function
+nextBtn.onclick= () => {
+    if (questionCount<questions.length-1){
+    questionCount++;
+    showQuestions(questionCount);
+        questionNumb++;
+        questionCounter(questionNumb);
+        nextBtn.classList.remove('active')
+    }
+    else{
+        console.log('Question Completed!');
+    }
+} 
+
+
+// Getting questions & answers and assigning
+function showQuestions(index){
+    const questionText = document.querySelector('.question-text');
+    questionText.textContent=`${questions[index].numb}) ${questions[index].question}`;
+    let optionTag = `<div class="option"><span>${questions[index].options[0]}</span></div>
+    <div class="option"><span>${questions[index].options[1]}</span></div>
+    <div class="option"><span>${questions[index].options[2]}</span></div>
+    <div class="option"><span>${questions[index].options[3]}</span></div>`;
+    optionList.innerHTML = optionTag
+    const option = document.querySelectorAll('.option');
+    for(let i = 0; i<option.length; i++){
+        option[i].setAttribute('onclick','optionSelected(this)');
+    }
+}
+
+// option selected
+function optionSelected(answer){
+    let userAnswer = answer.textContent;
+    let correctAnswer = questions[questionCount].answer;
+    let allOptions = optionList.children.length;
+
+    if (userAnswer == correctAnswer){
+        answer.classList.add('correct');
+        // add score
+        score++;
+        headerscore()
+    }
+    else{
+        answer.classList.add('incorrect'); 
+        // show correct answer
+        for(let i = 0; i < allOptions; i++){
+           if (optionList.children[i].textContent==correctAnswer){
+            optionList.children[i].setAttribute('class','option correct');
+           }
+        }
+
+    }
+    // disable choices after selection
+    for(let i = 0; i < allOptions; i++){
+        optionList.children[i].classList.add('disabled')
+    }
+    nextBtn.classList.add('active');
+}
+
+// Question counter
+function questionCounter(index){
+    const questionTotal = document.querySelector('.question-total');
+    questionTotal.textContent = `${index} of ${questions.length}`
+}
+
+function headerscore(){
+    const headerScoreText = document.querySelector('.header-score');
+    headerScoreText.textContent = `${score}/${questions.length}`
+    
+}
+
+
+showQuestions(0)
+questionCounter(1)
+headerscore()
