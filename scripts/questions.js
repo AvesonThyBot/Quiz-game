@@ -116,6 +116,13 @@ const questions = [
 const timer = document.querySelector(".timer"); // Timer
 const nextBtn = document.querySelector(".next-btn"); // Next button
 const optionList = document.querySelector(".option-list"); //Option list
+const resultBox = document.querySelector(".result-box"); // result box
+const quizBox = document.querySelector(".quiz-box"); //Quiz box
+const tryAgainBtn = document.querySelector(".tryAgain-btn"); //try again button
+const goHomeBtn = document.querySelector(".goHome-btn"); //go to home button
+
+
+
 
 // Assign variables
 let score = 0; 
@@ -133,10 +140,21 @@ nextBtn.onclick= () => {
         nextBtn.classList.remove('active')
     }
     else{
-        console.log('Question Completed!');
+        // score
+        showResultBox();
     }
 } 
 
+// go back to home button.
+tryAgainBtn.onclick= () => {
+    window.location.href= "/pages/quiz.html"
+} 
+
+
+// go back to home button.
+goHomeBtn.onclick= () => {
+    window.location.href= "/index.html"
+} 
 
 // Getting questions & answers and assigning
 function showQuestions(index){
@@ -188,13 +206,39 @@ function questionCounter(index){
     questionTotal.textContent = `${index} of ${questions.length}`
 }
 
+// score at top
 function headerscore(){
     const headerScoreText = document.querySelector('.header-score');
     headerScoreText.textContent = `${score}/${questions.length}`
     
 }
 
+// show results at end
+function showResultBox(){
+    quizBox.classList.add('hidden')
+    resultBox.classList.add('active')
+    
+    const scoreText = document.querySelector('.score-text');
+    scoreText.textContent= `Your Score ${score} out of ${questions.length}.`;
 
+    const circularProgress = document.querySelector('.circular-progress');
+    const progressValue = document.querySelector('.progress-value');
+    let progressStartValue = -1;
+    let progressEndValue = (score/questions.length)*100;
+    let speed = 20;
+    
+    let progress = setInterval(() => {
+        progressStartValue++;  
+        progressValue.textContent = `${progressStartValue}%`;
+        circularProgress.style.background = `conic-gradient(#48bbfe ${progressStartValue * 3.6}deg, rgba(114, 51, 51, 0.1) 0deg)`;
+        if (progressStartValue == progressEndValue){
+            clearInterval(progress);
+        }
+    },speed);
+}
+
+
+// functions to start quiz
 showQuestions(0)
 questionCounter(1)
 headerscore()

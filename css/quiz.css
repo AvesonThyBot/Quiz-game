@@ -39,6 +39,14 @@ body{
     flex-direction: column;
     padding: 20px 30px;
 }
+
+.quiz-section .quiz-box.hidden{
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(1);
+    transition: 1s ease;
+    transition-delay: .5s;
+}
 /* Container Title */
 .quiz-box h1{
     font-size: 32px;
@@ -154,11 +162,14 @@ body{
     border-color: rgba(0, 0, 0, 0.5);
 }
 
-/* results */
 
+/* Hide quiz box */
+
+
+/* results */
 .quiz-section .result-box{
     position: absolute;
-    top: 50%;
+    top: 43%;
     left: 50%;
     transform: translate(-50%,-50%);
     width: 500px;
@@ -170,11 +181,20 @@ body{
     flex-direction: column;
     align-items: center;
     background: #fff;
+    opacity: 0;
+    pointer-events: none;
 }
+.quiz-section .result-box.active{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* results header */
 .result-box h2{
     font-size: 52px;
 }
 
+/* percentage container */
 .result-box .percentage-container{
     width: 300px;
     display: flex;
@@ -183,6 +203,7 @@ body{
     margin: 20px 0 40px;
 }
 
+/* Circular progress bar */
 .percentage-container .circular-progress{
     position: relative;
     width: 250px;
@@ -194,6 +215,7 @@ body{
     align-items: center;
 }
 
+/* animation, before */
 .percentage-container .circular-progress::before{
     content: '';
     position: absolute;
@@ -203,22 +225,35 @@ body{
     border-radius: 50%;
 }
 
+/* animation, after */
+
+
+/* percentage outcome*/
 .circular-progress .progress-value{
     position: relative;
     font-size: 45px;
     font-weight: 600;
 }
 
+/* score text at bottom */
 .percentage-container .score-text{
     font-size: 26px;
     font-weight: 600;
     margin-top: 20px;
 }
 
+.percentage-container .timer-text{
+    font-size: 26px;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+/* buttons at bottom */
 .quiz-box .buttons{
     display: flex;
 }
 
+/* all buttons at .buttons */
 .buttons button{
     width: 130px;
     height: 47px;
@@ -234,17 +269,18 @@ body{
     transition: 0.5s;
 }
 
-.buttons button:nth-child(1):hover{
-    background: #20a6f3;
-    border-color: #20a6f3;
-}
+/* try again button & hover*/
 
 .buttons button:nth-child(2){
     background: transparent;
     color: #48bbfe;
 }
+.buttons button:nth-child(1):hover{
+    background: #20a6f3;
+    border-color: #20a6f3;
+}
+/* back to home button hover */
 .buttons button:nth-child(2):hover{
     background: #48bbfe;
     color: #fff;
-
 }
