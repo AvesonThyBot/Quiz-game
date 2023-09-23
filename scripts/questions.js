@@ -256,13 +256,16 @@ function showResultBox(){
 }
 
 // remove background
+let isBackgroundImage = true;
+
 function removeBackground() {
-    const mainElement = document.querySelector('.main');
-    if (mainElement.style.background === 'transparent') {
-        mainElement.style.background = 'url("/images/background.jpg") no-repeat';
+    const body = document.body;
+    if (isBackgroundImage) {
+        body.style.background = '#48bbfe';
     } else {
-        mainElement.style.background = 'transparent';
+        body.style.background = 'url("/images/background.jpg") no-repeat center / cover';
     }
+    isBackgroundImage = !isBackgroundImage;
 }
 
 // functions to start quiz
