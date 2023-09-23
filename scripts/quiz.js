@@ -25,14 +25,11 @@ continueBtn.onclick= () => {
 } 
 
 // background remover
-let isBackgroundImage = true;
-
 function removeBackground() {
-    const body = document.body;
-    if (isBackgroundImage) {
-        body.style.background = '#48bbfe';
+    const mainElement = document.querySelector('.main');
+    if (mainElement.style.background === 'transparent') {
+        mainElement.style.background = 'url("/images/background.jpg") no-repeat';
     } else {
-        body.style.background = 'url("/images/background.jpg") no-repeat center / cover';
+        mainElement.style.background = 'transparent';
     }
-    isBackgroundImage = !isBackgroundImage;
 }

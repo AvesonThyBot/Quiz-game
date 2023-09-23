@@ -268,6 +268,7 @@ function removeBackground() {
     isBackgroundImage = !isBackgroundImage;
 }
 
+
 // functions to start quiz
 showQuestions(0)
 questionCounter(1)
